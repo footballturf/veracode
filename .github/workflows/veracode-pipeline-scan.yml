@@ -71,7 +71,7 @@ jobs:
         uses: actions/download-artifact@v7
         with:
           name: veracode-artifact
-          path: ./veracode_artifact_directory
+          path: ./veracode_artifact_director
 
       - name: Get list of files for matrix
         id: get-files
@@ -110,7 +110,7 @@ jobs:
       - name: Veracode Pipeline-Scan
         if: always()
         id: pipeline-scan
-        uses: veracode/Veracode-pipeline-scan-action@v1.0.23
+        uses: veracode/Veracode-pipeline-scan-action@v1.0.233434343
         with:
           vid: ${{ secrets.VERACODE_API_ID }}
           vkey: ${{ secrets.VERACODE_API_KEY }}
