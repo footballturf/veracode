@@ -86,14 +86,12 @@ jobs:
         id: upload_and_scan
         with:
           appname: ${{ inputs.profile_name }}
-          createprofile: false
+          createprofile: true
           policy: ${{ inputs.policy_name }}
           version: '${{ env.VERSION }}'
           filepath: ./veracode_artifact_directory/
           vid: '${{ secrets.VERACODE_API_ID }}'
           vkey: '${{ secrets.VERACODE_API_KEY }}'
-          createsandbox: false
-          sandboxname: "Development Sandbox"
           #scanpollinginterval: 30
           scantimeout: 30
           # include: ${{ inputs.modules_to_scan }}
